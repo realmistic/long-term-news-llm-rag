@@ -1,0 +1,608 @@
+{
+    "meta": {
+        "title": "FinNews",
+        "link": "https://pythoninvest.com",
+        "description": "Weekly News Digest with the help of ChatGPT",
+        "language": "en"
+    },
+    "items": [
+        {
+            "title": "Week 17-24 July 2023",
+            "link": "https://pythoninvest.com/tpost/yk09rupzv1-week-17-24-july-2023",
+            "pubDate": "Mon, 24 Jul 2023 20:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 17-24 July",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6131-3163-4135-a565-356661323733/the-broad-industry-o.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 25-31 July 2023",
+            "link": "https://pythoninvest.com/tpost/j1x7ayspd1-week-25-31-july-2023",
+            "pubDate": "Tue, 01 Aug 2023 00:55:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 25-31 July",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3432-3966-4139-b434-386632386464/the-market-experienc.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 1-7 August 2023",
+            "link": "https://pythoninvest.com/tpost/drued3aod1-week-1-7-august-2023",
+            "pubDate": "Tue, 08 Aug 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 01-07 August",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3361-6265-4366-b661-646563373861/the-u-s--labor-marke.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 8-14 August 2023",
+            "link": "https://pythoninvest.com/tpost/u7h0i2kxy1-week-8-14-august-2023",
+            "pubDate": "Tue, 15 Aug 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 08-14 August",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6335-6162-4334-b631-393137666264/---our-upcoming-yout.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 15-21 August 2023",
+            "link": "https://pythoninvest.com/tpost/svym8jg001-week-15-21-august-2023",
+            "pubDate": "Tue, 22 Aug 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 15-21 August",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3862-6461-4930-b063-393233333433/-in-the-overall-mark.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 22-28 August 2023",
+            "link": "https://pythoninvest.com/tpost/ec9rcf2xc1-week-22-28-august-2023",
+            "pubDate": "Tue, 29 Aug 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 22-28 August",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6631-3962-4633-b566-346635636235/due-to-high-volatili.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 29 August -4 September 2023",
+            "link": "https://pythoninvest.com/tpost/y7erkx3491-week-29-august-4-september-2023",
+            "pubDate": "Tue, 05 Sep 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 29 August-4 September",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3833-6163-4239-a434-623339343535/the-market-experienc.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 5-11 September 2023",
+            "link": "https://pythoninvest.com/tpost/hs0j8s6hi1-week-5-11-september-2023",
+            "pubDate": "Tue, 12 Sep 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 5-11 September 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3434-3836-4765-a436-373838396439/1--apple-s-stock-val.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 12-18 September 2023",
+            "link": "https://pythoninvest.com/tpost/iifxj5tid1-week-12-18-september-2023",
+            "pubDate": "Tue, 19 Sep 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 12-18 September 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3864-6437-4637-b962-666330636237/10--oil-prices-could.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 19-25 September 2023",
+            "link": "https://pythoninvest.com/tpost/bmsu4zz001-week-19-25-september-2023",
+            "pubDate": "Tue, 26 Sep 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 19-25 September 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6266-3562-4361-b965-313333663033/-market-rollercoaste.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 26 September - 2 October 2023",
+            "link": "https://pythoninvest.com/tpost/ozgvn20lx1-week-26-september-2-october-2023",
+            "pubDate": "Tue, 03 Oct 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 26 September - 2 October 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6365-6361-4338-a165-373835363062/the-financial-market.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 3 - 9 October 2023",
+            "link": "https://pythoninvest.com/tpost/pr8d0y6ki1-week-3-9-october-2023",
+            "pubDate": "Tue, 10 Oct 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 3 - 9 October 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3038-6164-4533-b539-346432393930/tl-dr--nvidia--nvda-.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 10-16 October 2023",
+            "link": "https://pythoninvest.com/tpost/1fjgu0lon1-week-10-16-october-2023",
+            "pubDate": "Tue, 17 Oct 2023 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 10 - 16 October 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6334-6664-4462-a139-386564353665/tl-dr--nvidia--nvda-.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 24-30 October 2023",
+            "link": "https://pythoninvest.com/tpost/7zdkz5x901-week-24-30-october-2023",
+            "pubDate": "Tue, 31 Oct 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 24 - 30 October 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3034-6332-4763-b161-646433356532/amazon--amzn--report.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 31 October - 6 November 2023",
+            "link": "https://pythoninvest.com/tpost/s74mosxtj1-week-31-october-6-november-2023",
+            "pubDate": "Tue, 07 Nov 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 31October - 6 November 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3136-3630-4539-a561-343536653663/--key-economic-indic.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 7-13 November 2023",
+            "link": "https://pythoninvest.com/tpost/tk3bt13m41-week-7-13-november-2023",
+            "pubDate": "Tue, 14 Nov 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 7-13 November 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6130-6231-4665-b638-626464646430/investor-sentiment-a.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 14-20 November 2023",
+            "link": "https://pythoninvest.com/tpost/dj1ay4rjl1-week-14-20-november-2023",
+            "pubDate": "Tue, 21 Nov 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 14 - 20 November 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3638-3130-4338-a532-656338393238/overall--market-sent.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 21-27 November 2023",
+            "link": "https://pythoninvest.com/tpost/lsmi9iovx1-week-21-27-november-2023",
+            "pubDate": "Tue, 28 Nov 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 21 - 27 November 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3664-6563-4566-a638-656164633239/black-friday-week-an.svg",
+                "type": "image/svg+xml"
+            }
+        },
+        {
+            "title": "Week 28 November - 4 December 2023",
+            "link": "https://pythoninvest.com/tpost/az33o52ug1-week-28-november-4-december-2023",
+            "pubDate": "Tue, 05 Dec 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 28 November - 4 December 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3465-3065-4263-b834-663934353765/img-8nBkC1Uo1siYx5DR.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 5 - 11 December 2023",
+            "link": "https://pythoninvest.com/tpost/291b6l0dz1-week-5-11-december-2023",
+            "pubDate": "Tue, 12 Dec 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 5-11 December 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3732-3439-4834-b365-363464373034/img-BtMEkIDxgh5WIKwS.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 12-18 December 2023",
+            "link": "https://pythoninvest.com/tpost/8s7eigjd91-week-12-18-december-2023",
+            "pubDate": "Tue, 19 Dec 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 12-18 December 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3231-3865-4661-b833-663632326265/img-hrq3gMyTAGUhaeoC.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 19-26 December 2023",
+            "link": "https://pythoninvest.com/tpost/m8i3y99931-week-19-26-december-2023",
+            "pubDate": "Tue, 26 Dec 2023 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 19-26 December 2023",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6538-3263-4262-b264-613631326535/img-fwDfy0Dx3VvHoh0P.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 2-8 January 2024",
+            "link": "https://pythoninvest.com/tpost/dp1h81kgf1-week-2-8-january-2024",
+            "pubDate": "Tue, 09 Jan 2024 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 2-8 January 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3535-3966-4838-a237-643164626432/img-E8BPfqeoGKNPyEry.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 9-15 January 2024",
+            "link": "https://pythoninvest.com/tpost/hk2eoc0281-week-9-15-january-2024",
+            "pubDate": "Tue, 16 Jan 2024 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 9-15 January 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3065-6666-4331-b762-646335393031/img-q4tG4SKT1N61blb5.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 23-29 January 2024",
+            "link": "https://pythoninvest.com/tpost/xmsx4kxyn1-week-23-29-january-2024",
+            "pubDate": "Tue, 30 Jan 2024 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 23-29 January 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6236-3533-4537-a139-653035333237/img-Hh2XHn4ZDEYHjWxu.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 29 January - 5 February 2024",
+            "link": "https://pythoninvest.com/tpost/87smpmlf11-week-29-january-5-february-2024",
+            "pubDate": "Tue, 06 Feb 2024 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 29 January -5 February 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6132-3866-4261-a136-303238333563/img-kw2RrIB8AeeAQ1iH.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 6 - 12 February 2024",
+            "link": "https://pythoninvest.com/tpost/xafz8laoo1-week-6-12-february-2024",
+            "pubDate": "Tue, 13 Feb 2024 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 6-12 February 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6361-3564-4964-b464-323865306665/img-Ta4f05lrBk2Ndj0s.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 13 - 19 February 2024",
+            "link": "https://pythoninvest.com/tpost/0u5nsl1an1-week-13-19-february-2024",
+            "pubDate": "Tue, 20 Feb 2024 13:26:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 13-19 February 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3136-6662-4535-b534-363462343361/img-2zTQqC4PlYmBWNY8.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 20 - 26 February 2024",
+            "link": "https://pythoninvest.com/tpost/fd381hkjl1-week-20-26-february-2024",
+            "pubDate": "Tue, 27 Feb 2024 02:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 20-26 February 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6633-6139-4166-b531-326537336161/img-EOXGw4HL19Okpm82.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 27 February - 4 March 2024",
+            "link": "https://pythoninvest.com/tpost/40ufgmrse1-week-27-february-4-march-2024",
+            "pubDate": "Fri, 08 Mar 2024 01:29:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 27 February - 4 March 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6534-6237-4637-b263-306263336462/img-kIIpBilzcaM8Y6It.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 5 -11 March 2024",
+            "link": "https://pythoninvest.com/tpost/8klao0teg1-week-5-11-march-2024",
+            "pubDate": "Tue, 12 Mar 2024 01:30:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 5-11 March 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3430-3966-4333-b631-386465346238/img-4MUgS9n0JFddaHwZ.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 18-26 March 2024",
+            "link": "https://pythoninvest.com/tpost/kt34xy8fz1-week-18-26-march-2024",
+            "pubDate": "Wed, 27 Mar 2024 16:17:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 18-26 March 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3138-6265-4361-b339-316330626264/img-SyZFs1I4BrW9wFQ8.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 27 March - 1 April 2024",
+            "link": "https://pythoninvest.com/tpost/3dltpbzem1-week-27-march-1-april-2024",
+            "pubDate": "Tue, 02 Apr 2024 01:07:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 27 March - 1 April 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3464-3339-4534-a335-643032383662/img-DVpbD6YC6SweHt5e.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 2-8 April 2024",
+            "link": "https://pythoninvest.com/tpost/tye5vmu9u1-week-2-8-april-2024",
+            "pubDate": "Tue, 09 Apr 2024 01:37:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 2-8 April 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3836-3762-4565-b966-633963376336/img-4kWYYmBIwc6xSQYQ.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 9-15 April 2024",
+            "link": "https://pythoninvest.com/tpost/all6xppcm1-week-9-15-april-2024",
+            "pubDate": "Tue, 16 Apr 2024 00:46:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 9-15 April 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3339-3432-4031-b032-643230383136/img-ensxP7DpNWRHHrtx.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 16-22 April 2024",
+            "link": "https://pythoninvest.com/tpost/6gym4bjir1-week-16-22-april-2024",
+            "pubDate": "Mon, 22 Apr 2024 23:52:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 16-22 April 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6239-3566-4961-b330-663039396639/img-Qk2YtNxDPgVkxRQV.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 21-27 May 2024",
+            "link": "https://pythoninvest.com/tpost/hcufmog3c1-week-21-27-may-2024",
+            "pubDate": "Tue, 28 May 2024 01:47:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 21-27 May 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3137-6639-4262-b465-653863383661/img-xUqXjs3v1TTR5qrp.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 28 May - 3 June 2024",
+            "link": "https://pythoninvest.com/tpost/msyk5g64z1-week-28-may-3-june-2024",
+            "pubDate": "Tue, 04 Jun 2024 00:33:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 28 May -3 June 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3564-3337-4864-b561-343563313366/img-febLkPTYYKXvZ6yv.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 10-17 June 2024",
+            "link": "https://pythoninvest.com/tpost/2duytek041-week-10-17-june-2024",
+            "pubDate": "Tue, 18 Jun 2024 12:02:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 10-17 June 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3962-6562-4861-b138-646166386635/img-vRlYWKlXEvw1Zpip.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 18-24 June 2024",
+            "link": "https://pythoninvest.com/tpost/rat9kpxy21-week-18-24-june-2024",
+            "pubDate": "Tue, 25 Jun 2024 13:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 18-24 June 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6438-3965-4638-a533-663963393931/img-P12RgbOPO3DsqGNJ.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 22-27 August 2024",
+            "link": "https://pythoninvest.com/tpost/3ffeco2551-week-22-27-august-2024",
+            "pubDate": "Wed, 28 Aug 2024 01:32:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 22-27 August 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6530-3132-4931-a637-353434306638/img-F6Zf2J2TE7YzAWpt.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 28 August - 2 September 2024",
+            "link": "https://pythoninvest.com/tpost/cbdh3y1gz1-week-28-august-2-september-2024",
+            "pubDate": "Tue, 03 Sep 2024 00:16:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 28 August - 2 September 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3336-6465-4361-b034-326163663066/img-eGiWnjKgq6JEdP9h.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 3-9 September 2024",
+            "link": "https://pythoninvest.com/tpost/outb6eyy71-week-3-9-september-2024",
+            "pubDate": "Tue, 10 Sep 2024 00:22:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 3-9 September 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6662-6439-4233-a236-656463323738/img-uMLei5H7jOCYgUWl.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 10-16 September 2024",
+            "link": "https://pythoninvest.com/tpost/sbmuptlmv1-week-10-16-september-2024",
+            "pubDate": "Tue, 17 Sep 2024 01:18:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 10-16 September 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3264-3833-4332-b539-326337353530/img-Vi8dJySPEhpzAlnz.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 17-23 September 2024",
+            "link": "https://pythoninvest.com/tpost/lyxto14r41-week-17-23-september-2024",
+            "pubDate": "Tue, 24 Sep 2024 00:21:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 17-23 September 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild3735-3164-4330-b236-356466633462/img-83R8cnQ4Mv8Yb8BI.png",
+                "type": "image/png"
+            }
+        },
+        {
+            "title": "Week 24-30 September 2024",
+            "link": "https://pythoninvest.com/tpost/fukvxbgbl1-week-24-30-september-2024",
+            "pubDate": "Tue, 01 Oct 2024 01:00:00 +0300",
+            "author": "Ivan Brigida",
+            "category": "FinNews",
+            "description": "Market summary for the week 24-30 September 2024",
+            "content": null,
+            "enclosure": {
+                "url": "https://static.tildacdn.com/tild6630-3630-4161-b863-316138326265/img-3aEfKQNKCgvo22bT.png",
+                "type": "image/png"
+            }
+        }
+    ]
+}
