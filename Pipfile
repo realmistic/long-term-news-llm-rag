@@ -8,6 +8,7 @@ feedparser = "*"
 ipykernel = "*"
 notebook = "*"
 jupyterlab = "*"
+openai = "*"
 
 [dev-packages]
 
