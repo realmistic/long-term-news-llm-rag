@@ -9,6 +9,7 @@ ipykernel = "*"
 notebook = "*"
 jupyterlab = "*"
 openai = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
