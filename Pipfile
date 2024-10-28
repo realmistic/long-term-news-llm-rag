@@ -10,6 +10,7 @@ notebook = "*"
 jupyterlab = "*"
 openai = "*"
 python-dotenv = "*"
+pandas = "*"
 
 [dev-packages]
 
