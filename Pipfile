@@ -11,6 +11,8 @@ jupyterlab = "*"
 openai = "*"
 python-dotenv = "*"
 pandas = "*"
+pyarrow = "*"
+fastparquet = "*"
 
 [dev-packages]
 
