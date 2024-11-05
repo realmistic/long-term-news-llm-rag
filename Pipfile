@@ -13,6 +13,7 @@ python-dotenv = "*"
 pandas = "*"
 pyarrow = "*"
 fastparquet = "*"
+minsearch = "*"
 
 [dev-packages]
 
