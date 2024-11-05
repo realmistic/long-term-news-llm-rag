@@ -54,6 +54,45 @@ To run the content extraction:
 python scripts/02_get_content_data_flattened.py
 ```
 
+## Search Functionality
+
+The project implements text search capabilities using `minsearch`, allowing efficient search across all data fields:
+
+### Searchable Fields
+- `type`: News entry type (individual/market)
+- `start_date` & `end_date`: Time period of the news
+- `ticker`: Company/stock ticker symbols
+- `count`: Number of news items
+- `growth`: Growth percentage
+- `text`: Main news content
+- `model`: Model name for market summaries
+
+### Search Features
+- Full-text search across all fields
+- Field boosting (prioritizes matches in important fields):
+  * text (3x boost)
+  * type and ticker (2x boost)
+  * growth and model (1.5x boost)
+  * other fields (1x boost)
+- Link-based filtering for source tracking
+
+Example usage in notebooks:
+```python
+# Basic search
+results = search_news("technology growth")
+
+# Search with link filtering
+results = search_news("market analysis", link="specific_url")
+
+# Custom field boosting
+custom_boost = {
+    "ticker": 3,
+    "text": 2,
+    "type": 1
+}
+results = search_news("AAPL earnings", boost_dict=custom_boost)
+```
+
 ## Data
 
 ### Input Data
