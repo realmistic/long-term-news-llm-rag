@@ -170,6 +170,17 @@ def main():
     
     df = parse_feed_entries(feed_url)
     
+    # Ensure consistent data types before saving
+    if 'growth' in df.columns:
+        # Convert growth to string type, ensuring any None values become empty strings
+        df['growth'] = df['growth'].astype(str).replace('None', '')
+    
+    # Convert list columns to string representation
+    list_columns = ['topics', 'key_points', 'companies_mentioned', 'regions_mentioned']
+    for col in list_columns:
+        if col in df.columns:
+            df[col] = df[col].apply(lambda x: json.dumps(x) if x is not None else '')
+    
     # Save to Parquet file with Brotli compression
     save_start_time = time.time()
     os.makedirs("data", exist_ok=True)
