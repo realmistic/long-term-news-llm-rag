@@ -2,6 +2,20 @@
 Analyze long-term trends from weekly news publications.
 
 ## Replicate
+
+### Virtual Environment Check
+Before setting up, check if you're already in a virtual environment:
+```bash
+# Check if you're in a virtual environment
+pipenv --venv
+
+# If you see a warning about nested environments or an existing path, deactivate:
+deactivate
+
+# Now proceed with installation
+```
+
+### Installation
 To replicate the environment and support Jupyter notebooks, follow these steps:
 
 ```bash
@@ -11,8 +25,8 @@ pip install pipenv
 # Enter the virtual environment
 pipenv shell
 
-# Install required packages
-pipenv install ipykernel notebook jupyterlab python-dotenv openai feedparser pandas pyarrow tqdm
+# Install all dependencies from Pipfile
+pipenv install
 ```
 
 ## Environment Setup
