@@ -14,6 +14,11 @@ pandas = "*"
 pyarrow = "*"
 fastparquet = "*"
 minsearch = "*"
+langchain = "*"
+faiss-cpu = "*"
+langchain-core = "*"
+langchain-community = "*"
+langchain-openai = "*"
 
 [dev-packages]
 
