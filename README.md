@@ -71,10 +71,52 @@ The project includes several scripts for data extraction and processing:
 - Adds source link to each entry
 - Saves data in a flattened Parquet format with Brotli compression for optimal storage efficiency
 
-To run the content extraction:
+The script supports three processing modes:
 ```bash
-python scripts/02_get_content_data_flattened.py
+# Process only the latest entry (newest, since RSS feed is in reverse chronological order)
+python scripts/02_get_content_data_flattened.py --mode last
+
+# Add new entries to existing data (incremental updates)
+python scripts/02_get_content_data_flattened.py --mode new
+
+# Process all entries (default behavior)
+python scripts/02_get_content_data_flattened.py --mode all
 ```
+
+Note: The RSS feed entries are in reverse chronological order (newest first), so the 'last' mode processes the most recent entry.
+
+### 3. Market Statistics Addition (`scripts/03_add_market_stats.py`)
+- Downloads historical market data for individual tickers using yfinance
+- Calculates various market metrics:
+  * Weekly returns for individual stocks
+  * Market daily returns
+  * Market weekly returns
+  * Growth above market
+- Handles both individual stocks and market-wide entries
+- Saves enhanced dataset with market metrics in Parquet format
+
+To add market statistics:
+```bash
+python scripts/03_add_market_stats.py
+```
+
+Typical workflow:
+1. Fetch RSS feed data (optional, as step 2 can fetch directly from the feed)
+   ```bash
+   python scripts/01_get_rss_data.py
+   ```
+
+2. Extract content with desired mode (last/new/all)
+   ```bash
+   python scripts/02_get_content_data_flattened.py --mode last   # or new/all
+   ```
+
+3. Add market statistics
+   ```bash
+   python scripts/03_add_market_stats.py
+   ```
+
+This pipeline transforms raw RSS feed data into a rich dataset with market metrics.
 
 ## Search Functionality
 
