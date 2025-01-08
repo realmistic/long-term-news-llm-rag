@@ -5,8 +5,8 @@ import time
 import json
 import requests
 import urllib.request
-import yfinance as yf
-from datetime import datetime, timedelta
+import argparse
+from datetime import datetime
 from openai import OpenAI
 from dotenv import load_dotenv
 from tqdm import tqdm
@@ -105,32 +105,8 @@ def get_feed_content(feed_url):
     
     return feed_content
 
-def calculate_returns(ticker_symbol, end_date, days=5):
-    """Calculate returns for a given ticker and time period."""
-    try:
-        if isinstance(end_date, str):
-            end_date = pd.to_datetime(end_date)
-        
-        download_end = end_date + timedelta(days=1)
-        download_start = end_date - timedelta(days=days + 5)
-        
-        ticker = yf.Ticker(ticker_symbol)
-        hist = ticker.history(start=download_start, end=download_end)
-        
-        if len(hist) < 2:
-            return None, None
-        
-        end_price = hist['Close'].iloc[-1]
-        start_price = hist['Close'].iloc[-days-1] if len(hist) > days else hist['Close'].iloc[0]
-        
-        return_val = (end_price - start_price) / start_price
-        return return_val, end_price
-    except Exception as e:
-        print(f"Error calculating returns for {ticker_symbol}: {str(e)}")
-        return None, None
-
-def parse_feed_entries(feed_url):
-    """Function to parse all entries from the RSS feed and return a DataFrame."""
+def parse_feed_entries(feed_url, mode='all'):
+    """Function to parse entries from the RSS feed and return a DataFrame."""
     # Create a custom URL opener with headers for feedparser
     opener = urllib.request.build_opener()
     opener.addheaders = [(k, v) for k, v in headers.items()]
@@ -148,9 +124,57 @@ def parse_feed_entries(feed_url):
         print("Falling back to direct feedparser...")
         feed = feedparser.parse(feed_url)
     
-    print(f"Number of entries found: {len(feed.entries)}")
-    all_content = []
+    # Process all entries first to get their dates
+    all_entries_data = []
+    for entry in feed.entries:
+        content = None
+        if 'turbo_content' in entry:
+            content = entry['turbo_content']
+        elif 'content' in entry:
+            content = entry['content'][0]['value']
+        elif 'description' in entry:
+            content = entry['description']
+        
+        if content:
+            # Look for date patterns in content
+            import re
+            # Pattern 1: Individual news pattern
+            date_pattern1 = r'End date for the articles: (\d{4}-\d{2}-\d{2})'
+            # Pattern 2: Market news pattern
+            date_pattern2 = r'before (\d{4}-\d{2}-\d{2})'
+            
+            match1 = re.search(date_pattern1, content)
+            match2 = re.search(date_pattern2, content)
+            
+            end_date = None
+            if match1:
+                end_date = match1.group(1)
+            elif match2:
+                end_date = match2.group(1)
+            
+            if end_date:
+                all_entries_data.append((entry, end_date))
+                print(f"Found entry with date: {end_date}")
     
+    # Sort entries by date in descending order (newest first)
+    all_entries_data.sort(key=lambda x: x[1], reverse=True)
+    print(f"Found {len(all_entries_data)} entries with dates")
+    if all_entries_data:
+        print(f"Date range: {all_entries_data[-1][1]} to {all_entries_data[0][1]}")
+    
+    # Get entries based on mode
+    if mode == 'last' and all_entries_data:
+        # Take the entry with the latest date
+        entries = [all_entries_data[0][0]]
+        print(f"Processing only the latest entry (date: {all_entries_data[0][1]})")
+    elif mode == 'new' and all_entries_data:
+        entries = [entry for entry, _ in all_entries_data]  # Process all for new mode, will filter later
+        print(f"Number of entries to process for new mode: {len(entries)}")
+    else:  # all mode
+        entries = [entry for entry, _ in all_entries_data]
+        print(f"Processing all {len(entries)} entries")
+    
+    all_content = []
     total_start_time = time.time()
     
     prompt_template = '''Expert Web Scraper.
@@ -226,7 +250,7 @@ Constraints:
 4. Ensure numeric values (count, growth) are numbers, not strings
 '''
     
-    for entry in tqdm(feed['entries'], desc="Processing entries"):
+    for entry in tqdm(entries, desc="Processing entries"):
         entry_start_time = time.time()
         
         # Extract content from entry
@@ -276,36 +300,6 @@ Constraints:
     # Convert to DataFrame and process market data
     df = pd.DataFrame(all_content)
     
-    # Calculate market data for each row
-    market_data = []
-    for index, row in tqdm(df.iterrows(), total=len(df), desc="Calculating market data"):
-        end_date = pd.to_datetime(row['end_date'])
-        
-        market_daily_return, _ = calculate_returns('^GSPC', end_date, days=1)
-        market_weekly_return, _ = calculate_returns('^GSPC', end_date, days=5)
-        
-        weekly_return = None
-        growth_above_market = None
-        
-        if row['type'] == 'individual':
-            weekly_return, _ = calculate_returns(row['ticker'], end_date, days=5)
-            if weekly_return is not None and market_weekly_return is not None:
-                growth_above_market = weekly_return - market_weekly_return
-        else:
-            weekly_return = market_weekly_return
-            growth_above_market = 0 if market_weekly_return is not None else None
-        
-        market_data.append({
-            'weekly_return': weekly_return,
-            'market_daily_return': market_daily_return,
-            'market_weekly_return': market_weekly_return,
-            'growth_above_market': growth_above_market
-        })
-    
-    # Add market data to DataFrame
-    market_df = pd.DataFrame(market_data)
-    df = pd.concat([df, market_df], axis=1)
-    
     # Convert growth to growth_last_day and divide by 100
     if 'growth' in df.columns:
         df['growth_last_day'] = df['growth'].apply(lambda x: x/100 if pd.notnull(x) else x)
@@ -317,17 +311,44 @@ Constraints:
     return df
 
 def main():
+    # Parse command line arguments
+    parser = argparse.ArgumentParser(description='Process RSS feed data with different modes')
+    parser.add_argument('--mode', type=str, choices=['last', 'new', 'all'], default='all',
+                      help='Processing mode: last (only latest entry), new (append new entries), all (process all entries)')
+    args = parser.parse_args()
+    
     main_start_time = time.time()
     
-    df = parse_feed_entries(feed_url)
+    # Get new data with specified mode
+    new_df = parse_feed_entries(feed_url, mode=args.mode)
+    
+    if args.mode == 'new' and os.path.exists(output_file_path):
+        # Append new entries to existing data
+        existing_df = pd.read_parquet(output_file_path)
+        print(f"Found existing data with {len(existing_df)} entries")
+        
+        # Get the latest date in existing data
+        latest_existing_date = existing_df['end_date'].max()
+        print(f"Latest existing date: {latest_existing_date}")
+        
+        # Filter new data to keep only entries newer than the latest existing date
+        new_df = new_df[new_df['end_date'] > latest_existing_date]
+        print(f"Found {len(new_df)} new entries to append")
+        
+        # Combine existing and new data
+        new_df = pd.concat([existing_df, new_df], ignore_index=True)
+        print(f"Total entries after merge: {len(new_df)}")
+    else:
+        print(f"Processing {len(new_df)} entries")
     
     # Save to Parquet file with Brotli compression
     save_start_time = time.time()
     os.makedirs("data", exist_ok=True)
-    df.to_parquet(output_file_path, compression="brotli")
+    new_df.to_parquet(output_file_path, compression="brotli")
     save_end_time = time.time()
     
     print(f"Data saved to {output_file_path}. Save time: {save_end_time - save_start_time:.2f}s")
+    print(f"Final dataset contains {len(new_df)} entries")
     
     main_end_time = time.time()
     print(f"Total execution time: {main_end_time - main_start_time:.2f}s")
