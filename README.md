@@ -119,55 +119,58 @@ python scripts/03_add_market_stats.py
 
 This pipeline transforms raw RSS feed data into a rich dataset with market metrics.
 
-## Search Functionality
+## Experimental Notebooks
 
-The project implements text search capabilities using `minsearch`, allowing efficient search across all data fields:
+The project includes several experimental Jupyter notebooks that demonstrate different approaches to data processing and analysis:
 
-### Searchable Fields
-- `type`: News entry type (individual/market)
-- `start_date` & `end_date`: Time period of the news
-- `ticker`: Company/stock ticker symbols
-- `count`: Number of news items
-- `growth`: Growth percentage
-- `text`: Main news content
-- `model`: Model name for market summaries
+### 1. Local Page Scraping (`notebooks/01_scrape_one_page_locally.ipynb`)
+- Demonstrates basic web scraping using local language models through Ollama
+- Processes news pages locally without requiring remote API calls
+- Note: This approach was not adopted for production due to limitations in extracting structured JSON data, even with larger local models
 
-### Search Features
-- Full-text search across all fields
-- Field boosting (prioritizes matches in important fields):
-  * text (3x boost)
-  * type and ticker (2x boost)
-  * growth and model (1.5x boost)
-  * other fields (1x boost)
-- Link-based filtering for source tracking
+### 2. GPT-4 Page Scraping (`notebooks/02_scrape_one_page_gpt4o.ipynb`)
+- Implements advanced web scraping using GPT-4
+- Successfully extracts structured information from news articles
+- Serves as the prototype for the production script (02_get_content_data_flattened.py)
 
-Example usage in notebooks:
-```python
-# Basic search
-results = search_news("technology growth")
+### 3. Basic RAG Implementation (`notebooks/03_RAG_from_content.ipynb`)
+- Implements a basic search system using minsearch for text-based filtering
+- Features include field boosting (text, ticker, growth) and link-based filtering
+- Provides simple search functionality across news type, dates, tickers, and content
+- Note: This basic implementation was later enhanced in notebook 04
 
-# Search with link filtering
-results = search_news("market analysis", link="specific_url")
+### 4. Augmented RAG System (`notebooks/04_Augmented_generation_RAG.ipynb`)
+- Implements a comprehensive RAG system using LangChain and FAISS for efficient vector-based retrieval
+- Features advanced search prioritizing high-performance metrics:
+  * Indexes weekly returns and market outperformance
+  * Enables semantic search through FAISS embeddings
+  * Optimizes for finding significant market movements and trends
+- Enhances results using GPT4o-mini for content generation and analysis
+- Represents the final production-ready implementation
 
-# Custom field boosting
-custom_boost = {
-    "ticker": 3,
-    "text": 2,
-    "type": 1
-}
-results = search_news("AAPL earnings", boost_dict=custom_boost)
-```
+### Data Processing Flow
+The project processes data through several stages:
 
-## Data
-
-### Input Data
-RSS feed with news (mostly weekly, some weeks are missing)—around 55 weeks or 1 year of data (as of Jan-2025):
-
+1. Raw RSS Data Collection
+- Source: Weekly financial news feed (approximately 55 weeks as of Jan-2025)
 - RSS Feed URL: [https://pythoninvest.com/rss-feed-612566707351.xml](https://pythoninvest.com/rss-feed-612566707351.xml)
-- This represents the weekly financial news feed section of the website: [https://pythoninvest.com/#weekly-fin-news-feed](https://pythoninvest.com/#weekly-fin-news-feed)
+- Web Interface: [https://pythoninvest.com/#weekly-fin-news-feed](https://pythoninvest.com/#weekly-fin-news-feed)
+- Output: `data/input_news_feed.json` (from script 01_get_rss_data.py)
 
-### Output Data
-The processed data is saved in Parquet format with Brotli compression for efficient storage and fast read performance. The data structure is as follows:
+2. News Content Extraction
+- Input: Raw RSS data
+- Processing: Extracts structured information using GPT-4o-mini
+- Output: `data/news_feed_flattened.parquet`
+- Content: Individual stock news and market summaries
+
+3. Market Statistics Integration
+- Input: Processed news data
+- Processing: Adds market performance metrics using yfinance
+- Final Output: `data/news_feed_with_market_stats.parquet`
+- Additional Data: Weekly returns, market comparisons, growth metrics
+
+## Output Data Structure
+The final dataset (`data/news_feed_with_market_stats.parquet`) uses Parquet format with Brotli compression and contains:
 
 1. Individual News Entries:
 ```python
@@ -179,7 +182,10 @@ The processed data is saved in Parquet format with Brotli compression for effici
     "count": number,
     "growth": percentage,
     "text": "news content",
-    "link": "source_url"
+    "link": "source_url",
+    "weekly_return": number,
+    "market_weekly_return": number,
+    "growth_above_market": number
 }
 ```
 
@@ -193,8 +199,7 @@ The processed data is saved in Parquet format with Brotli compression for effici
     "count": number,
     "model": "model_name",
     "text": "market summary",
-    "link": "source_url"
+    "link": "source_url",
+    "market_weekly_return": number
 }
 ```
-
-The data is saved to `data/news_feed_flattened.parquet`. The Brotli compression algorithm is used for its superior compression ratio while maintaining good decompression speed, making it ideal for this type of textual data.
