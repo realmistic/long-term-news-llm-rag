@@ -100,7 +100,8 @@ To add market statistics:
 python scripts/03_add_market_stats.py
 ```
 
-Typical workflow:
+## Typical workflow
+
 1. Fetch RSS feed data (optional, as step 2 can fetch directly from the feed)
    ```bash
    python scripts/01_get_rss_data.py
@@ -160,7 +161,7 @@ results = search_news("AAPL earnings", boost_dict=custom_boost)
 ## Data
 
 ### Input Data
-RSS feed with news (mostly weekly, some weeks are missing)—around 46 weeks or 1 year of data:
+RSS feed with news (mostly weekly, some weeks are missing)—around 55 weeks or 1 year of data (as of Jan-2025):
 
 - RSS Feed URL: [https://pythoninvest.com/rss-feed-612566707351.xml](https://pythoninvest.com/rss-feed-612566707351.xml)
 - This represents the weekly financial news feed section of the website: [https://pythoninvest.com/#weekly-fin-news-feed](https://pythoninvest.com/#weekly-fin-news-feed)
