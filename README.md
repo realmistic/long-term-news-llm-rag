@@ -100,6 +100,34 @@ To add market statistics:
 python scripts/03_add_market_stats.py
 ```
 
+### 4. News Analysis (`scripts/04_analyse_one_ticker.py`)
+- Implements RAG (Retrieval-Augmented Generation) for analyzing news and market trends
+- Supports both ticker-specific and market-wide analysis
+- Features:
+  * Custom question support for targeted analysis
+  * Comprehensive source documentation
+  * Performance metrics integration
+  * Market comparison analysis
+- Prerequisites:
+  * Python packages: langchain, openai, python-dotenv, pandas, faiss-cpu
+  * OPENAI_API_KEY environment variable
+  * Input file: data/news_feed_with_market_stats.parquet
+
+Usage examples:
+```bash
+# Analyze specific ticker
+python scripts/04_analyse_one_ticker.py --ticker NVDA
+
+# Market-wide analysis (no ticker)
+python scripts/04_analyse_one_ticker.py
+
+# Custom question for specific ticker
+python scripts/04_analyse_one_ticker.py --ticker NVDA --question "What are the revenue trends for NVDA?"
+
+# Custom market-wide question
+python scripts/04_analyse_one_ticker.py --question "What are the trends in the tech sector?"
+```
+
 ## Typical workflow
 
 1. Fetch RSS feed data (optional, as step 2 can fetch directly from the feed)
@@ -133,13 +161,13 @@ The project includes several experimental Jupyter notebooks that demonstrate dif
 - Successfully extracts structured information from news articles
 - Serves as the prototype for the production script (02_get_content_data_flattened.py)
 
-### 3. Basic RAG Implementation (`notebooks/03_RAG_from_content.ipynb`)
+### 3. MinSearch Implementation (`notebooks/03_minsearch_from_content.ipynb`)
 - Implements a basic search system using minsearch for text-based filtering
 - Features include field boosting (text, ticker, growth) and link-based filtering
 - Provides simple search functionality across news type, dates, tickers, and content
 - Note: This basic implementation was later enhanced in notebook 04
 
-### 4. Augmented RAG System (`notebooks/04_Augmented_generation_RAG.ipynb`)
+### 4. RAG System (`notebooks/04_RAG_from_content.ipynb`)
 - Implements a comprehensive RAG system using LangChain and FAISS for efficient vector-based retrieval
 - Features advanced search prioritizing high-performance metrics:
   * Indexes weekly returns and market outperformance
@@ -202,4 +230,3 @@ The final dataset (`data/news_feed_with_market_stats.parquet`) uses Parquet form
     "link": "source_url",
     "market_weekly_return": number
 }
-```
