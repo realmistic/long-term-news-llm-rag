@@ -100,7 +100,7 @@ To add market statistics:
 python scripts/03_add_market_stats.py
 ```
 
-### 4. News Analysis (`scripts/04_analyse_one_ticker.py`)
+### 4. News Analysis (`scripts/04_answer_one_question.py`)
 - Implements RAG (Retrieval-Augmented Generation) for analyzing news and market trends
 - Supports both ticker-specific and market-wide analysis
 - Features:
@@ -115,18 +115,26 @@ python scripts/03_add_market_stats.py
 
 Usage examples:
 ```bash
-# Analyze specific ticker
-python scripts/04_analyse_one_ticker.py --ticker NVDA
+# Ask about specific company (automatically detects ticker)
+python scripts/04_answer_one_question.py "What are the latest developments for NVDA?"
+python scripts/04_answer_one_question.py "How has Tesla performed in terms of revenue and growth?"
 
-# Market-wide analysis (no ticker)
-python scripts/04_analyse_one_ticker.py
+# Ask about specific aspects
+python scripts/04_answer_one_question.py "What are NVDA's AI developments and market performance?"
+python scripts/04_answer_one_question.py "Tell me about Tesla's manufacturing challenges"
 
-# Custom question for specific ticker
-python scripts/04_analyse_one_ticker.py --ticker NVDA --question "What are the revenue trends for NVDA?"
-
-# Custom market-wide question
-python scripts/04_analyse_one_ticker.py --question "What are the trends in the tech sector?"
+# Hide source documents
+python scripts/04_answer_one_question.py "What are NVDA's recent developments?" --show_sources=false
 ```
+
+Parameters:
+- `question`: Required. The question to analyze (e.g., "What are the latest developments for NVDA?")
+- `--show_sources`: Optional. Show source documents, defaults to True
+
+The script automatically:
+- Detects if the question is about a specific ticker
+- Shows chronological analysis with period headers [YYYY-MM-DD..YYYY-MM-DD, +/-X.X% vs market]
+- Includes performance metrics and context for each period
 
 ## Typical workflow
 
@@ -170,11 +178,15 @@ The project includes several experimental Jupyter notebooks that demonstrate dif
 ### 4. RAG System (`notebooks/04_RAG_from_content.ipynb`)
 - Implements a comprehensive RAG system using LangChain and FAISS for efficient vector-based retrieval
 - Features advanced search prioritizing high-performance metrics:
-  * Indexes weekly returns and market outperformance
-  * Enables semantic search through FAISS embeddings
-  * Optimizes for finding significant market movements and trends
-- Enhances results using GPT4o-mini for content generation and analysis
-- Represents the final production-ready implementation
+  * Automatic ticker detection from questions
+  * Chronological analysis with period headers [YYYY-MM-DD..YYYY-MM-DD, +/-X.X% vs market]
+  * Performance metrics and market comparisons
+  * Semantic search through FAISS embeddings
+- Provides natural language interface:
+  * Ask about specific companies (e.g., "What are NVDA's AI developments?")
+  * Query particular aspects (e.g., "How has Tesla's manufacturing evolved?")
+  * Control source visibility with show_sources parameter
+- Represents the final production-ready implementation with the same functionality as the script
 
 ### Data Processing Flow
 The project processes data through several stages:
